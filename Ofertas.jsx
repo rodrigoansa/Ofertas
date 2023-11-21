@@ -22,22 +22,19 @@ var botaoAplicar = grupoQuatro.add('button', undefined, 'Aplicar')
 
 botaoAplicar.onClick = function(){
     var comp = app.project.activeItem;
-
-    if (comp.selectedLayers.length > 0 && comp.selectedLayers[0] instanceof TextLayer) {
-
-    var newText = tituloNome1;
-
     
+        
+    // Prompt the user for a new text
+    var newText = prompt("Enter new text:", "New Text");
+
+    // Change the text of the selected text layer
     var textLayer = comp.selectedLayers[0];
     var textProperty = textLayer.property("Source Text");
     textProperty.setValue(newText);
 
+    // Save the project
     app.project.save();
-    }
-
-
-  
-
+    
 }
 
 mainWindow.show();
