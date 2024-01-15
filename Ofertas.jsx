@@ -25,7 +25,9 @@ botaoAplicar.onClick = function(){
     
         
     // Prompt the user for a new text
-    var newText = prompt("Enter new text:", "New Text");
+    var newText = tituloNome1.
+    
+    //prompt("Enter new text:", "New Text");
 
     // Change the text of the selected text layer
     var textLayer = comp.selectedLayers[0];
